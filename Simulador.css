@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root {
+    --arrow-bg: rgba(255, 255, 255, 0.3);
+    --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+    --option-bg: white;
+    --select-bg: rgba(255, 255, 255, 0.2);
+  }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: white;
+}
+
+.container {
+    width: 590px;
+    background: #44d4aba9;
+    border: 2px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+   
+    
+
+}
+
+    .container h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .container .input-box {
+    
+
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+  
+
+.input-box .txtbox {
+    width: 95%;
+    height: 100%;
+    background: #fff;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    padding: 12px 15px 12px 20px;
+    display: flex;
+    opacity: 0.9;
+}
+
+
+
+
+    .container .btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+    
+}
+.input-box .input-field {
+    width: 50%;
+    height: 70px;
+    padding: 12px 15px 11px 2px;
+}
+select {
+    /* Reset */
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;    
+    
+    /* Personalize */
+    width: 18rem;
+    padding: 12px 9px 12px 20px;
+    background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+      linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+    color:black;
+    border-radius: 40px;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    /* Remove IE arrow */
+    &::-ms-expand {
+      display: none;
+    }
+    /* Remove focus outline */
+    &:focus {
+      outline: none;
+    }
+    /* <option> colors */
+    option {
+      color: black;
+      background-color: var(--option-bg);
+    }
+  }
+  

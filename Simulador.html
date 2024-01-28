@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparação de Investimentos</title>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <link rel="stylesheet" type="text/css" href="Simulador.css" />
+  <script type="text/javascript" src="Simulador.js">  </script>
+</head>
+<body>
+    <div class="container">
+  <h1>Comparação de Investimentos</h1>
+  <form id="FormInvestimento">
+    <div class="input-box">
+    <label for="ValorInicial" >Valor Inicial:</label>
+    <input type="number" id="ValorInicial"  class="txtbox"><br>
+</div>
+<div class="input-box">
+    <label for="ValorMensal">Contribuição Mensal:</label>
+    <input type="number" id="ValorMensal" required class="txtbox"><br>
+</div>  <div class="input-box">
+    <div class="input-field">
+   <label for="Tempo">Tempo:</label>
+    <input type="number" id="Tempo" class="txtbox" required></div>
+    <div class="input-field">
+
+<br>
+    <select id="timeUnit">
+      <option value="meses">Meses</option>
+      <option value="anos">Anos</option>
+    </select><br>
+    </div>
+</div>
+<br>
+    <button type="button" class="btn" onclick="calculateInvestments()">Calcular</button>
+  </form>
+</div><br>
+<div id="graphContainer" style="width: 800px; height: 400px; display: none;">
+    <div id="columnchart_material"></div>
+  </div>
+
+</body>
+</html>
