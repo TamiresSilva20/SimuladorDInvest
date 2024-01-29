@@ -3,8 +3,9 @@ function calculateInvestments() {
     const ValorMensal = parseFloat(document.getElementById('ValorMensal').value);
     const Tempo = parseFloat(document.getElementById('Tempo').value);
     const timeUnit = document.getElementById('timeUnit').value;
-
-    const cdiRate = 0.005; // Exemplo de taxa CDI
+    
+ const cdiRate = 0.005;
+ //  Exemplo de taxa CDI
     const poupancaRate = 0.004; // Exemplo de taxa de poupança
     const tesouroDiretoRate = 0.007; // Exemplo de taxa Tesouro Direto
     
@@ -62,3 +63,15 @@ for (let i = 1; i <= Tempo; i++) {
         chart.draw(data, google.charts.Bar.convertOptions(options));
     
       }}
+  
+      fetch('https://api.hgbrasil.com/finance/taxes?key=f9568849"')
+        .then(response => response.json())
+        .then(data => {
+            const cdiRate = data.results.cdi; // Ajuste isso de acordo com a estrutura real da resposta da API
+
+            // Restante do código...
+        })
+        .catch(error => {
+            console.error('Erro ao obter a taxa CDI:', error);
+            // Defina uma taxa padrão ou trate o erro de outra forma
+        });
