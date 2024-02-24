@@ -1,4 +1,3 @@
-// ...
 const apiUrl = "https://api.hgbrasil.com/finance/taxes?key=f9568849";
 let cdiValue= null;
 let selicValue = null;
@@ -64,9 +63,9 @@ function calculateInvestments() {
   const timeUnit = document.getElementById('timeUnit').value;
 
   // Definindo as taxas de juros para CDI, Poupança e Tesouro Direto
-  const cdiRate = cdiValue; // 11% ao ano
-  const poupancaRate = 0.617; // 6,17% ao ano
-  const tesouroDiretoRate = selicValue; // Taxa Selic (ou outra taxa de referência) - nesse caso, 10.71% ao ano
+  const cdiRate = cdiValue || 0.1115; // 11% ao ano
+  const poupancaRate = 0.06; // 6,17% ao ano
+  const tesouroDiretoRate = selicValue|| 0.1115; // Taxa Selic (ou outra taxa de referência) - nesse caso, 10.71% ao ano
 
   // Criando um array para armazenar os dados do investimento ao longo do tempo
   const data1 = [];
